@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>cpf</th>
+                <th>idade</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+                        <tr>
+                            <td>{{ cliente.nome }}</td>
+                            <td>{{ cliente.cpf }}</td>
+                            <td>{{ cliente.idade }}</td>
+                            <td>{{ cliente.email }}</td>
+                        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
